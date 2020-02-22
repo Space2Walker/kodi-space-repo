@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addons><addon id="plugin.program.dnsleaktest" version="1.1.0" name="DNS Leak-Test" provider-name="Space2Walker">
+<addons><addon id="plugin.program.dnsleaktest" name="DNS Leak-Test" provider-name="Space2Walker" version="1.1.0">
 <requires>
   <import addon="xbmc.python" version="2.26.0" />
   <import addon="script.module.requests" version="2.19.1" />
 </requires>
-<extension point="xbmc.python.pluginsource" library="main.py">
+<extension library="main.py" point="xbmc.python.pluginsource">
   <provides>executable</provides>
 </extension>
 <extension point="xbmc.addon.metadata">
@@ -26,14 +26,14 @@
     - cmd pop-ups on Windows gone
   </news>
 </extension>
-</addon><addon id="plugin.video.xvideos" version="1.2.0" name="Xvideos" provider-name="Lord Grey">
+</addon><addon id="plugin.video.xvideos" name="Xvideos" provider-name="Lord Grey" version="1.2.0">
 <requires>
   <import addon="xbmc.python" version="2.19.0" />
   <import addon="script.module.beautifulsoup4" version="4.5.3" />
   <import addon="script.module.requests" version="2.22.0" />
 
 </requires>
-<extension point="xbmc.python.pluginsource" library="main.py">
+<extension library="main.py" point="xbmc.python.pluginsource">
   <provides>video</provides>
 </extension>
 <extension point="xbmc.addon.metadata">
@@ -60,14 +60,14 @@
     Categorys are removed for Now.
   </news>
 </extension>
-</addon><addon id="plugin.video.wrestling24" version="0.0.4" name="Wrestling 24" provider-name="Lord Grey">
+</addon><addon id="plugin.video.wrestling24" name="Wrestling 24" provider-name="Lord Grey" version="0.0.4">
 <requires>
   <import addon="xbmc.python" version="2.26.0" />
   <import addon="script.module.beautifulsoup4" version="4.5.3" />
   <import addon="script.module.requests" version="2.19.1" />
   <import addon="script.module.urlresolver" version="2.10.0" />
 </requires>
-<extension point="xbmc.python.pluginsource" library="main.py">
+<extension library="main.py" point="xbmc.python.pluginsource">
   <provides>video</provides>
 </extension>
 <extension point="xbmc.addon.metadata">
