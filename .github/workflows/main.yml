@@ -22,7 +22,7 @@ jobs:
 
       - name: Run Repo Build
         run: |
-          ./create_repository.py https://github.com/Space2Walker/plugin.program.dnsleaktest.git https://github.com/Space2Walker/plugin.video.xvideos.git https://github.com/Space2Walker/plugin.video.wrestling24.git
+          ./tools/create_repository.py https://github.com/Space2Walker/plugin.program.dnsleaktest.git https://github.com/Space2Walker/plugin.video.xvideos.git https://github.com/Space2Walker/plugin.video.wrestling24.git
 
       - uses: stefanzweifel/git-auto-commit-action@v3.0.0
         with:
