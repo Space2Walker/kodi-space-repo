@@ -1,6 +1,6 @@
 name: Update Repo
 # This workflow is triggered on pushes to the repository.
-on: repository_dispatch
+on: push
 
 jobs:
   build:
