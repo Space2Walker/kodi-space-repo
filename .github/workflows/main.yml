@@ -1,12 +1,10 @@
 name: Update Repo
-# This workflow is triggered on pushes to the repository.
-on: push
+on: repository_dispatch
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # This step checks out a copy of your repository.
       - name: Checkout Repo
         uses: actions/checkout@v2
 
@@ -27,6 +25,7 @@ jobs:
           https://github.com/Space2Walker/plugin.video.xvideos.git \
           https://github.com/Space2Walker/plugin.video.wrestling24.git
 
-      - uses: stefanzweifel/git-auto-commit-action@v3.0.0
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v3.0.0
         with:
-          commit_message: Update Repo
+          commit_message: Automated Repo Update
