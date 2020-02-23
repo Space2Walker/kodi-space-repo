@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="plugin.video.chaturbate"
-version="0.0.8"
-name="Chaturbate"
-provider-name="Lord Grey">
+	   version="0.0.9"
+	   name="Chaturbate"
+	   provider-name="Lord Grey">
 <requires>
   <import addon="xbmc.python" version="2.26.0"/>
-  <import addon="script.module.beautifulsoup4" version="4.5.3"/> 
-  <import addon="script.module.requests" version="2.19.1"/>  
+	<import addon="script.module.beautifulsoup4" version="4.5.3"/>
+	<import addon="script.module.requests" version="2.19.1"/>
 </requires>
 <extension point="xbmc.python.pluginsource" library="main.py">
   <provides>video</provides>
@@ -19,6 +19,6 @@ provider-name="Lord Grey">
     <icon>icon.png</icon>
     <fanart>fanart.jpg</fanart>
   </assets>
-  <news>Updated with latest artwork metadata</news>
+	<news>Working as of 2020-02-23</news>
 </extension>
 </addon>
