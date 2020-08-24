@@ -21,6 +21,7 @@ jobs:
       - name: Run Repo Build
         run: |
           ./tools/create_repository.py \
+          https://github.com/Space2Walker/script.module.metahandler.git \
           https://github.com/Space2Walker/plugin.program.dnsleaktest.git \
           https://github.com/Space2Walker/plugin.video.xvideos.git \
           https://github.com/Space2Walker/plugin.video.chaturbate.git \
