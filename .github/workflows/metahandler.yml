@@ -1,7 +1,7 @@
 name: Update Repo
 on:
   repository_dispatch:
-    types: metahandler
+    types: [metahandler]
 
 jobs:
   build:
