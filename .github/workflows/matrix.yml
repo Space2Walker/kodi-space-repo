@@ -1,6 +1,6 @@
 name: Update Repo
-on: 
-  repository_dispatch
+on:
+  repository_dispatch:
     types: [Matrix]
 jobs:
   build:
