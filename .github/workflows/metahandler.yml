@@ -27,7 +27,7 @@ jobs:
           ./plugin.program.dnsleaktest \
           ./plugin.video.chaturbate \
           ./plugin.video.wrestling24 \
-          ./plugin.video.xvideos \
+          ./plugin.video.xvideos
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v3.0.0
