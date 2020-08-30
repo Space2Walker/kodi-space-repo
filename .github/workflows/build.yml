@@ -21,9 +21,9 @@ jobs:
         run: |
           ./tools/create_repository.py \
           https://github.com/Space2Walker/script.module.metahandler.git#leia \
-          https://github.com/Space2Walker/plugin.program.dnsleaktest.git \
+          https://github.com/Space2Walker/plugin.program.dnsleaktest.git#leia \
           https://github.com/Space2Walker/plugin.video.xvideos.git \
-          https://github.com/Space2Walker/plugin.video.chaturbate.git \
+          https://github.com/Space2Walker/plugin.video.chaturbate.git#leia \
           https://github.com/Space2Walker/plugin.video.wrestling24.git
           
       - name: Commit changes
