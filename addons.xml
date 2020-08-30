@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <addons><addon id="script.module.metahandler" name="metahandler" provider-name="Metahandler Team xStream" version="5.0.0">
   <requires>
-	<import addon="xbmc.python" version="3.0.0" />
+	<import addon="xbmc.python" version="2.26.0" />
     <import addon="script.module.six" version="0.0.1" />
     <import addon="script.module.simplejson" version="3.3.0" />
     <import addon="script.module.myconnpy" version="1.1.6" />
@@ -18,9 +18,9 @@
         <icon>icon.png</icon>
     </assets>
   </extension>
-</addon><addon id="plugin.program.dnsleaktest" name="DNS Leak-Test" provider-name="Space2Walker" version="1.1.1">
+</addon><addon id="plugin.program.dnsleaktest" name="DNS Leak-Test" provider-name="Space2Walker" version="1.1.0">
 <requires>
-	<import addon="xbmc.python" version="3.0.0" />
+  <import addon="xbmc.python" version="2.26.0" />
   <import addon="script.module.requests" version="2.19.1" />
 </requires>
 <extension library="main.py" point="xbmc.python.pluginsource">
@@ -45,9 +45,9 @@
     - cmd pop-ups on Windows gone
   </news>
 </extension>
-</addon><addon id="plugin.video.chaturbate" name="Chaturbate" provider-name="Lord Grey" version="0.5.1">
+</addon><addon id="plugin.video.chaturbate" name="Chaturbate" provider-name="Lord Grey" version="0.5.0">
 	<requires>
-		<import addon="xbmc.python" version="3.0.0" />
+		<import addon="xbmc.python" version="2.26.0" />
 		<import addon="script.module.beautifulsoup4" version="4.5.3" />
 		<import addon="script.module.requests" version="2.19.1" />
 	</requires>
