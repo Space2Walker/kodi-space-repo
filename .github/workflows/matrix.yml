@@ -1,11 +1,16 @@
 name: Update Repo
-on: repository_dispatch
+on:
+  repository_dispatch:
+    types: [Matrix]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
+        with:
+          ref: matrix
+        
         
       - name: Set up Python 3.7
         uses: actions/setup-python@v1
@@ -20,13 +25,12 @@ jobs:
       - name: Run Repo Build
         run: |
           ./tools/create_repository.py \
-          https://github.com/Space2Walker/script.module.metahandler.git#leia \
-          https://github.com/Space2Walker/plugin.program.dnsleaktest.git#leia \
-          https://github.com/Space2Walker/plugin.video.xvideos.git \
-          https://github.com/Space2Walker/plugin.video.chaturbate.git#leia \
-          https://github.com/Space2Walker/plugin.video.wrestling24.git
+          https://github.com/Space2Walker/script.module.metahandler.git#matrix \
+          https://github.com/Space2Walker/plugin.program.dnsleaktest.git#matrix \
+          https://github.com/Space2Walker/plugin.video.chaturbate.git#matrix
           
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v3.0.0
         with:
+          branch: matrix
           commit_message: Automated Repo Update
