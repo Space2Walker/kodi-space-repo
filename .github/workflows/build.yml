@@ -1,0 +1,33 @@
+name: Update Repo
+# This workflow is triggered on pushes to the repository.
+on: repository_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # This step checks out a copy of your repository.
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install gitpython
+          
+      - name: Run Repo Build
+        run: |
+          ./create_repository.py \
+          https://github.com/Space2Walker/plugin.program.dnsleaktest.git#leia \
+          https://github.com/Space2Walker/plugin.video.xvideos.git \
+          https://github.com/Space2Walker/plugin.video.chaturbate.git#leia \
+          https://github.com/Space2Walker/plugin.video.wrestling24.git \
+          https://github.com/Space2Walker/script.module.metahandler.git#leia
+      - uses: stefanzweifel/git-auto-commit-action@v3.0.0
+        with:
+          commit_message: Repo Update by ${{ github.event.client_payload.ref }}
