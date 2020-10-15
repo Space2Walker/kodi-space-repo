@@ -3,7 +3,12 @@
 	<extension point="xbmc.addon.repository" name="Space Dev Repo">
 		<info compressed="false">https://raw.githubusercontent.com/Space2Walker/kodi-space-repo/leia/addons.xml</info>
 		<checksum>https://raw.githubusercontent.com/Space2Walker/kodi-space-repo/leia/addons.xml.md5</checksum>
-		<datadir zip="true">https://raw.githubusercontent.com/Space2Walker/kodi-space-repo/leia</datadir>
+		<datadir zip="true">https://raw.githubusercontent.com/Space2Walker/kodi-space-repo/leia/</datadir>
+		<dir>
+            		<info compressed="false">https://raw.githubusercontent.com/Space2Walker/kodi-space-repo/leia/addons.xml</info>
+            		<checksum>https://raw.githubusercontent.com/Space2Walker/kodi-space-repo/leia/addons.xml.md5</checksum>
+            		<datadir zip="true">https://raw.githubusercontent.com/Space2Walker/kodi-space-repo/leia/</datadir>
+        	</dir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary>Space2Walkers Development Repo</summary>
