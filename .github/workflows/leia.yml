@@ -29,7 +29,8 @@ jobs:
           https://github.com/Space2Walker/plugin.program.dnsleaktest.git#leia \
           https://github.com/Space2Walker/plugin.video.chaturbate.git#leia \
           https://github.com/Space2Walker/plugin.video.wrestling24.git \
-          https://github.com/Space2Walker/plugin.video.xvideos.git
+          https://github.com/Space2Walker/plugin.video.xvideos.git\
+          https://github.com/siku2/script.service.sponsorblock.git
           
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v3.0.0
