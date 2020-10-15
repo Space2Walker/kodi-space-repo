@@ -1,24 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addons><addon id="script.module.metahandler" name="metahandler" provider-name="Metahandler Team xStream" version="5.0.0">
-  <requires>
-	<import addon="xbmc.python" version="2.26.0" />
-    <import addon="script.module.six" version="0.0.1" />
-    <import addon="script.module.simplejson" version="3.3.0" />
-    <import addon="script.module.myconnpy" version="1.1.6" />
-  </requires>
-  <extension library="lib" point="xbmc.python.module" />
-  <extension point="xbmc.addon.metadata">
-    <summary lang="de">Lädt Artworks für Addons herunter, für TV Serien, Filme und Music Videos und speichert diese in einer SQLITE Datenbank</summary>
-    <description lang="de">Speichert Metadaten für TV Serien, Filme und Music Videos. [CR]Quellen:[CR]www.thetvdb.com[CR]www.themoviedb.org[CR]www.imdb.com[CR]www.omdbapi.com[CR]Diese Produkt verwendet den TMDb API, ist aber nicht von TMDb zertifiziert.</description>
-    <disclaimer lang="de">Wir stehen in keinerlei Verbindung mit Kodi</disclaimer>
-    <language>de</language>
-    <platform>all</platform>
-    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-    <assets>
-        <icon>icon.png</icon>
-    </assets>
-  </extension>
-</addon><addon id="plugin.program.dnsleaktest" name="DNS Leak-Test" provider-name="Space2Walker" version="1.1.0">
+<addons><addon id="plugin.program.dnsleaktest" name="DNS Leak-Test" provider-name="Space2Walker" version="1.1.0">
 <requires>
   <import addon="xbmc.python" version="2.26.0" />
   <import addon="script.module.requests" version="2.19.1" />
@@ -120,4 +101,65 @@
     Categorys are removed for Now.
   </news>
 </extension>
+</addon><addon id="script.service.sponsorblock" name="SponsorBlock" provider-name="siku2" version="0.2.2">
+    <requires>
+        <import addon="xbmc.python" version="2.23.0" />
+        <import addon="script.module.requests" version="2.15.1" />
+        <import addon="script.module.six" version="1.13.0" />
+        <import addon="plugin.video.youtube" version="6.7.0" />
+    </requires>
+
+    <extension library="service.py" point="xbmc.service" />
+
+    <extension point="kodi.context.item">
+        <menu id="kodi.core.main">
+            <item library="context.py">
+                <label>32027</label>
+                <visible>String.IsEqual(ListItem.Property(Addon.ID),plugin.video.youtube)</visible>
+            </item>
+        </menu>
+    </extension>
+
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">Skip YouTube in-video sponsors</summary>
+        <description lang="en_GB">
+SponsorBlock browser extension ported to Kodi's YouTube plugin.
+
+SponsorBlock is a crowdsourced project to skip sponsor segments in YouTube videos.
+Users submit when a sponsor happens and the add-on automatically skips sponsors it knows about.
+        </description>
+        <disclaimer lang="en_GB">This is an unoffical port of the SponsorBlock browser extension</disclaimer>
+        <news>
+[0.2.2]
+- Fixed "Playback fails with sponsor section at video start" again.
+  Let's hope it worked this time :) (@bclindner, #14)
+
+[0.2.1]
+- Fixed "Playback fails with sponsor section at video start" (#12)
+- Added German translation (@NettoHikari, #9)
+
+[0.2.0]
+- Support for SponsorBlock categories
+- Option to disable SponsorBlock for unlisted videos.
+- Added context menu entry to the YouTube plugin for SponsorBlock
+- Preload skip segments to catch sponsors at the start of a video
+- Fixed the bug which causes a video to keep playing even after the video ended
+        </news>
+
+        <summary lang="de">Überspringe Sponsoren, betteln um Abonnenten und mehr in YouTube Videos</summary>
+        <description lang="de">
+SponsorBlock für Kodis YouTube Plugin.
+
+SponsorBlock ist ein Crowdsourcing-Projekt zum Überspringen von Sponsorensegmenten in YouTube Videos.
+Benutzer melden diverse Segmente die dann automatisch übersprungen werden.
+        </description>
+
+        <platform>all</platform>
+        <license>MIT</license>
+        <source>https://github.com/siku2/script.service.sponsorblock</source>
+        <assets>
+            <icon>resources/images/icon.png</icon>
+            <fanart>resources/images/fanart.jpg</fanart>
+        </assets>
+    </extension>
 </addon></addons>
